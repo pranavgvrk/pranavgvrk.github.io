@@ -290,6 +290,70 @@
 					</code>
 				</div>
 			</li>
+			<li>
+				<div>
+					<p>what is pop()method in JavaScript?</p>
+					<p>The pop() method is similar as the shift() method but the difference is that the Shift method works at the start of the array. Also the pop() method take the last element off of the given array and returns it. The array on which is called is then altered.<br>Example:</p>
+					<code>var clothes = ["Shirt", "Pant", "TShirt"];<br>
+						clothes.pop();
+						console.log(clothes) //Now clothes becomes ["Shirt","Pant"]
+					</code>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>Whether JavaScript has concept level scope?</p>
+					<p>No. JavaScript does not have concept level scope. The variable declared inside the function has scope inside the function.</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>Mention what is the disadvantage of using <i>innerHTML</i> in JavaScript?</p>
+					<p>Using <i>innerHTML</i> in JavaScript has below disadvantages:</p>
+					<ul>
+						<li>Content is replaced everywhere</li>
+						<li>We cannot use like "appending to innerHTML"</li>
+						<li>Even if you use <i>+=</i> like "innerHTML = innerHTML + 'html'" still the old content is replaced by html,</li>
+						<li>The entire innerHTML content is re-parsed and build into elements, therefore its much slower</li>
+						<li>The innerHTML does not provide validation and therefore we can potentially insert valid and broken HTML in the document and break it</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>What is the use of <i>typeof</i> operator?</p>
+					<p><i>typeof</i> is an operator which is used to return a string description of the type of a variable.</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>What are the different types of errors in JavaScript?</p>
+					<ul>
+						<li>Load time errors: Errors which come up when loading a web page like improper syntax errors are known as Load time errors and it generates the errors dynamically.</li>
+						<li>Run time errors: Errors that come due to misuse of the command inside the HTML language.</li>
+						<li>Logical Errors: These are the errors that occur due to the bad logic performed on a function which is having different operation.</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>What is unshift method in JavaScript?</p>
+					<p>Unshift method is like push method which works at the beginning of the array. This method is used to prepend one or more elements to the beginning of the array.</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>What is the 'Strict' mode in JavaScript and how can it be enabled?</p>
+					<p>Strict Mode adds certain compulsions to JavaScript. Under the strict mode, JavaScript shows errors for a piece of codes, which did not show an error before, but might be problematic and potentially unsafe. Strict mode also solves some mistakes that hamper the JavaScript engines to work efficiently.<br>
+					Strict mode can be enabled by adding the string literal "use strict" above the file. This can be illustrated by the given example:</p>
+					<code>
+						function myfunction() {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;"use strict";<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;var v = "This is a strict mode function";<br>
+						}
+					</code>
+				</div>
+			</li>
 		</ol>
 	</body>
 </html>
