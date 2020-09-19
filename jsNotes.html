@@ -51,137 +51,142 @@
 					<p>Is it possible to break JavaScript Code into several lines?</p>
 					<p>And if you change to a new line when not within a string statement, then Javascript ignores break in line.<br>Example:<p>
 					<code>
-						var x=1, y=2
+						var x=1, y=2<br>
 						z=<br>x+y;
 					</code>
 					<p>The above code is perfectly fine, though not advisable as it hampers debugging.</p>
 				</div>
 			</li>
-			<li><div><p>Which company developed JavaScript?<p>
+			<li>
+				<div>
+					<p>Which company developed JavaScript?<p>
 					<p>Netscape is the software company who developed JavaScript.</p>
-					<li><div><p>What are undeclared and undefined variables?</p>
-							<ol>
-								<li>Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered.</li>
-								<li>Undefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned.</li>
-							</ol>
-						</div>
-					</li>
+				</div>
+			</li>
+			<li><div><p>What are undeclared and undefined variables?</p>
+					<ul>
+						<li>Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered.</li>
+						<li>Undefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned.</li>
+					</ul>
+				</div>
+			</li>
 
-					<li>
-						<div>
-							<p>Write the code for adding new elements dynamically?</p>
-							<p>Refer "toaddcodedynamically.html"</p>
-						</div>
-					</li>
-					<li>
-						<div>
-							<p>What are global variables? How are these variable declared and what are the problems associated with using them?</p>
-							<p>Global variables are those that are available throughout the length of the code, that is, these have no scope. The var keyword is used to declare a local variable or object. If the var keyword is omitted, a global variable is declared.<br>Example:</p>
-							<code>
-								// Declare a global globalVariable = "Test";
-							</code>
-							<p>The problems that are faced by using global variables are the clash of variable names of local and global scope. Also, it is difficult to debug and test the code that relies on global variables.</p>
-						</div>
-					</li>
+			<li>
+				<div>
+					<p>Write the code for adding new elements dynamically?</p>
+					<p>Refer "toaddcodedynamically.html"</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>What are global variables? How are these variable declared and what are the problems associated with using them?</p>
+					<p>Global variables are those that are available throughout the length of the code, that is, these have no scope. The var keyword is used to declare a local variable or object. If the var keyword is omitted, a global variable is declared.<br>Example:</p>
+					<code>
+						// Declare a global globalVariable = "Test";
+					</code>
+					<p>The problems that are faced by using global variables are the clash of variable names of local and global scope. Also, it is difficult to debug and test the code that relies on global variables.</p>
+				</div>
+			</li>
 
-					<li>
-						<div>
-							<p>What is a prompt box?</p>
-							<p>A prompt box is a box which allows the user to enter input by providing a text box. Label and box will be provided to enter the text or number.</p>
-							<p>OK -> returns entered string</p>
-							<p>Cancel -> returns null</p>
-						</div>
-					</li>
+			<li>
+				<div>
+					<p>What is a prompt box?</p>
+					<p>A prompt box is a box which allows the user to enter input by providing a text box. Label and box will be provided to enter the text or number.</p>
+					<p>OK -> returns entered string</p>
+					<p>Cancel -> returns null</p>
+				</div>
+			</li>
 
-					<li>
-						<div>
-							<p>What is <i>this</i> keyword in JavaScript?</p>
-							<p><i>this</i> keyword refers to the object from where it was called.</p>
-						</div>
-					</li>
-					<li>
-						<div>
-							<p>Explain the working of timers in JavaScript? Also elucidate the drawbacks of using the timer, if any?</p>
-							<p>Timers are used to execute a piece of code at a set time or also to repeat the code in a given interval of time. This is done by using the functions setTimeout, setInterval and clearInterval.</p>
-							<p>The setTimeout(function, delay) function is used to start a timer that calls a particular function after the mentioned delay. The setInterval(function, delay) function is used to repeatedly execute the given function in the mentioned delay and only halts when cancelled. The clearInterval(id) function instructs the timer to stop.</p>
-							<p>Timers are operated within a single thread, and thus events might queue up, waiting to be executed.</p>
-						</div>
-					</li>
-					<li>
-						<div>
-							<p>Which symbol is used for comments in Javascript?</p>
-							<code>// for Single line comments
-								/* Multi<br>
-								Line<br>
-								Comment<br>
-								*/
-							</code>
-						</div>
-					</li>
+			<li>
+				<div>
+					<p>What is <i>this</i> keyword in JavaScript?</p>
+					<p><i>this</i> keyword refers to the object from where it was called.</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>Explain the working of timers in JavaScript? Also elucidate the drawbacks of using the timer, if any?</p>
+					<p>Timers are used to execute a piece of code at a set time or also to repeat the code in a given interval of time. This is done by using the functions setTimeout, setInterval and clearInterval.</p>
+					<p>The <code>setTimeout(function, delay)</code> is used to start a timer that calls a particular function after the mentioned delay. The setInterval(function, delay) function is used to repeatedly execute the given function in the mentioned delay and only halts when cancelled. The clearInterval(id) function instructs the timer to stop.</p>
+					<p>Timers are operated within a single thread, and thus events might queue up, waiting to be executed.</p>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>Which symbol is used for comments in Javascript?</p>
+					<code>// for Single line comments<br>
+						/* Multi<br>
+						Line<br>
+						Comment<br>
+						*/
+					</code>
+				</div>
+			</li>
 
-					<li>
-						<div>
-							<p>What is the difference between ViewState and SessionState?</p>
-							<p><i>ViewState</i> is specific to a page in a session.<br>
-							<i>SessionState</i> is specific to user specific data that can be accessed across all pages in the web application.</p>
-						</div>
-					</li>
+			<li>
+				<div>
+					<p>What is the difference between ViewState and SessionState?</p>
+					<p><i>ViewState</i> is specific to a page in a session.<br>
+					<i>SessionState</i> is specific to user specific data that can be accessed across all pages in the web application.</p>
+				</div>
+			</li>
 
-					<li>
-						<div>
-							<p>What is <b>===</b> operator?</p>
-							<p><b>===</b> is called as strict equality operator which returns true when the two operands are having the same value without any type conversion.</p>
-						</div>
-					</li>
+			<li>
+				<div>
+					<p>What is <b>===</b> operator?</p>
+					<p><b>===</b> is called as strict equality operator which returns true when the two operands are having the same value without any type conversion.</p>
+				</div>
+			</li>
 
-					<li>
-						<div>
-							<p>Explain how can you submit a form using JavaScript?</p>
-							<p>To submit a form using JavaScript use <code>document.form[0].submit();</code></p>
-						</div>
-					</li>
-
-
-					<li>
-						<div>
-							<p>Does JavaScript support automatic type conversion?</p>
-							<p>Yes JavaScript does support automatic type conversion, it is the common way of type conversion used by JavaScript developers</p>
-						</div>
-					</li>
+			<li>
+				<div>
+					<p>Explain how can you submit a form using JavaScript?</p>
+					<p>To submit a form using JavaScript use <code>document.form[0].submit();</code></p>
+				</div>
+			</li>
 
 
-					<li>
-						<div>
-							<p>How can the style/class of an element be changed?</p>
-							<p>It can be done in the following way:</p>
-							<code>
-								document.getElementById("myText").style.fontSize = "20?";
-								or
-								document.getElementById("myText").className = "anyclass";
-							</code>
-						</div>
-					</li>
+			<li>
+				<div>
+					<p>Does JavaScript support automatic type conversion?</p>
+					<p>Yes JavaScript does support automatic type conversion, it is the common way of type conversion used by JavaScript developers</p>
+				</div>
+			</li>
 
-					<li>
-						<div>
-							<p>Explain how to read and write a file using JavaScript?</p>
-							<p>There are two ways to read and write a file using JavaScript:</p>
-							<ul>
-								<li>Using JavaScript extensions</li>
-								<li>Using a web page and Active X objects</li>
-							</ul>
-						</div>
-					</li>
 
-					<li>
-						<div>
-							<p>What are all the looping structures in JavaScript?</p>
-							<ul>
-								<li>For</li>
-								<li>While</li>
-								<li>do-while loops</li>
-							</ul>
-						</div>
-					</li>
+			<li>
+				<div>
+					<p>How can the style/class of an element be changed?</p>
+					<p>It can be done in the following way:</p>
+					<code>
+						document.getElementById("myText").style.fontSize = "20?";<br>
+						or<br>
+						document.getElementById("myText").className = "anyclass";
+					</code>
+				</div>
+			</li>
+
+			<li>
+				<div>
+					<p>Explain how to read and write a file using JavaScript?</p>
+					<p>There are two ways to read and write a file using JavaScript:</p>
+					<ul>
+						<li>Using JavaScript extensions</li>
+						<li>Using a web page and Active X objects</li>
+					</ul>
+				</div>
+			</li>
+
+			<li>
+				<div>
+					<p>What are all the looping structures in JavaScript?</p>
+					<ul>
+						<li>For</li>
+						<li>While</li>
+						<li>do-while loops</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
 	</body>
 </html>
