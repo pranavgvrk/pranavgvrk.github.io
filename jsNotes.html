@@ -1,359 +1,382 @@
 <html>
-	<head>
-		<title>
-			Javascript notes
-		</title>
-		<style>
-			body{
-				font-family:Courier New;
-				font-size:18px;
-			}
-			li > div > p:first-child{
-				color:red;
-			}
-			h1{
-				text-align: center;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Javascript Notes</h1>
-		<hr />
-		<ol>
-			<li><div>
-					<p> What is JavaScript?</p>
-					<p>
-					JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language
-					</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>Enumerate the differences between Java and JavaScript?</p>
-					<p>Java is a complete programming language. In contrast, JavaScript is a coded program that can be introduced to HTML pages. These two languages are not at all inter-dependent and are designed for the different intent. Java is an object - oriented programming (OOPS) or structured programming language like C++ or C whereas JavaScript is a client-side scripting language.</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>What are JavaScript Data Types?</p><p>Following are the JavaScript Data types:</p>
-					<ul>
-						<li>Number</li>
-						<li>String</li>
-						<li>Boolean</li>
-						<li>Object</li>
-						<li>Undefined</li>
-					</ul>
-				</div>
-			</li>
-			<li><div><p>What is the use of isNaN function?</p>
-					<p>isNan function returns true if the argument is not a number otherwise it is false.</p></div>
-			</li>
-			<li><div><p>Between JavaScript and an ASP script, which is faster?</p>
-					<p>JavaScript is faster. JavaScript is a client-side language and thus it does not need the assistance of the web server to execute. On the other hand, ASP is a server-side language and hence is always slower than JavaScript.</p>
-					<p>Javascript now is also a server side language (nodejs).</p></div>
-			</li>
-			<li>
-				<div>
-					<p>What is negative infinity?</p>
-					<p>Negative Infinity is a number in JavaScript which can be derived by dividing negative number by zero.</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>Is it possible to break JavaScript Code into several lines?</p>
-					<p>And if you change to a new line when not within a string statement, then Javascript ignores break in line.<br>Example:<p>
-					<code>
-						var x=1, y=2<br>
-						z=<br>x+y;
-					</code>
-					<p>The above code is perfectly fine, though not advisable as it hampers debugging.</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>Which company developed JavaScript?<p>
-					<p>Netscape is the software company who developed JavaScript.</p>
-				</div>
-			</li>
-			<li><div><p>What are undeclared and undefined variables?</p>
-					<ul>
-						<li>Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered.</li>
-						<li>Undefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned.</li>
-					</ul>
-				</div>
-			</li>
+    <head>
+        <title>
+            Javascript notes
+        </title>
+        <style>
+            body{
+                font-family:Courier New;
+                font-size:18px;
+            }
+            li > div > p:first-child{
+                color:red;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript Notes</h1>
+        <hr />
+        <ol>
+            <li><div>
+                    <p> What is JavaScript?</p>
+                    <p>
+                    JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>Enumerate the differences between Java and JavaScript?</p>
+                    <p>Java is a complete programming language. In contrast, JavaScript is a coded program that can be introduced to HTML pages. These two languages are not at all inter-dependent and are designed for the different intent. Java is an object - oriented programming (OOPS) or structured programming language like C++ or C whereas JavaScript is a client-side scripting language.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>What are JavaScript Data Types?</p><p>Following are the JavaScript Data types:</p>
+                    <ul>
+                        <li>Number</li>
+                        <li>String</li>
+                        <li>Boolean</li>
+                        <li>Object</li>
+                        <li>Undefined</li>
+                    </ul>
+                </div>
+            </li>
+            <li><div><p>What is the use of isNaN function?</p>
+                    <p>isNan function returns true if the argument is not a number otherwise it is false.</p></div>
+            </li>
+            <li><div><p>Between JavaScript and an ASP script, which is faster?</p>
+                    <p>JavaScript is faster. JavaScript is a client-side language and thus it does not need the assistance of the web server to execute. On the other hand, ASP is a server-side language and hence is always slower than JavaScript.</p>
+                    <p>Javascript now is also a server side language (nodejs).</p></div>
+            </li>
+            <li>
+                <div>
+                    <p>What is negative infinity?</p>
+                    <p>Negative Infinity is a number in JavaScript which can be derived by dividing negative number by zero.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>Is it possible to break JavaScript Code into several lines?</p>
+                    <p>And if you change to a new line when not within a string statement, then Javascript ignores break in line.<br>Example:<p>
+                    <pre>
+                    <code>
+                        var x=1, y=2<br>
+                        z=<br>x+y;
+                    </code>
+                    </pre>
+                    <p>The above code is perfectly fine, though not advisable as it hampers debugging.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>Which company developed JavaScript?<p>
+                    <p>Netscape is the software company who developed JavaScript.</p>
+                </div>
+            </li>
+            <li><div><p>What are undeclared and undefined variables?</p>
+                    <ul>
+                        <li>Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered.</li>
+                        <li>Undefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned.</li>
+                    </ul>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>Write the code for adding new elements dynamically?</p>
-					<p>Refer "toaddcodedynamically.html"</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>What are global variables? How are these variable declared and what are the problems associated with using them?</p>
-					<p>Global variables are those that are available throughout the length of the code, that is, these have no scope. The var keyword is used to declare a local variable or object. If the var keyword is omitted, a global variable is declared.<br>Example:</p>
-					<code>
-						// Declare a global globalVariable = "Test";
-					</code>
-					<p>The problems that are faced by using global variables are the clash of variable names of local and global scope. Also, it is difficult to debug and test the code that relies on global variables.</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>Write the code for adding new elements dynamically?</p>
+                    <p>Refer "toaddcodedynamically.html"</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>What are global variables? How are these variable declared and what are the problems associated with using them?</p>
+                    <p>Global variables are those that are available throughout the length of the code, that is, these have no scope. The var keyword is used to declare a local variable or object. If the var keyword is omitted, a global variable is declared.<br>Example:</p>
+                    <pre>
+                    <code>
+                        // Declare a global globalVariable = "Test";
+                    </code>
+                    </pre>
+                    <p>The problems that are faced by using global variables are the clash of variable names of local and global scope. Also, it is difficult to debug and test the code that relies on global variables.</p>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>What is a prompt box?</p>
-					<p>A prompt box is a box which allows the user to enter input by providing a text box. Label and box will be provided to enter the text or number.</p>
-					<p>OK -> returns entered string</p>
-					<p>Cancel -> returns null</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>What is a prompt box?</p>
+                    <p>A prompt box is a box which allows the user to enter input by providing a text box. Label and box will be provided to enter the text or number.</p>
+                    <p>OK -> returns entered string</p>
+                    <p>Cancel -> returns null</p>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>What is <i>this</i> keyword in JavaScript?</p>
-					<p><i>this</i> keyword refers to the object from where it was called.</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>Explain the working of timers in JavaScript? Also elucidate the drawbacks of using the timer, if any?</p>
-					<p>Timers are used to execute a piece of code at a set time or also to repeat the code in a given interval of time. This is done by using the functions setTimeout, setInterval and clearInterval.</p>
-					<p>The <code>setTimeout(function, delay)</code> is used to start a timer that calls a particular function after the mentioned delay. The setInterval(function, delay) function is used to repeatedly execute the given function in the mentioned delay and only halts when cancelled. The clearInterval(id) function instructs the timer to stop.</p>
-					<p>Timers are operated within a single thread, and thus events might queue up, waiting to be executed.</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>Which symbol is used for comments in Javascript?</p>
-					<code>// for Single line comments<br>
-						/* Multi<br>
-						Line<br>
-						Comment<br>
-						*/
-					</code>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>What is <i>this</i> keyword in JavaScript?</p>
+                    <p><i>this</i> keyword refers to the object from where it was called.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>Explain the working of timers in JavaScript? Also elucidate the drawbacks of using the timer, if any?</p>
+                    <p>Timers are used to execute a piece of code at a set time or also to repeat the code in a given interval of time. This is done by using the functions setTimeout, setInterval and clearInterval.</p>
+                    <p>The <code>setTimeout(function, delay)</code> is used to start a timer that calls a particular function after the mentioned delay. The setInterval(function, delay) function is used to repeatedly execute the given function in the mentioned delay and only halts when cancelled. The clearInterval(id) function instructs the timer to stop.</p>
+                    <p>Timers are operated within a single thread, and thus events might queue up, waiting to be executed.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>Which symbol is used for comments in Javascript?</p>
+                    <pre>
+                    <code>// for Single line comments<br>
+                        /* Multi<br>
+                        Line<br>
+                        Comment<br>
+                        */
+                    </code>
+                    </pre>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>What is the difference between ViewState and SessionState?</p>
-					<p><i>ViewState</i> is specific to a page in a session.<br>
-					<i>SessionState</i> is specific to user specific data that can be accessed across all pages in the web application.</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>What is the difference between ViewState and SessionState?</p>
+                    <p><i>ViewState</i> is specific to a page in a session.<br>
+                    <i>SessionState</i> is specific to user specific data that can be accessed across all pages in the web application.</p>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>What is <b>===</b> operator?</p>
-					<p><b>===</b> is called as strict equality operator which returns true when the two operands are having the same value without any type conversion.</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>What is <b>===</b> operator?</p>
+                    <p><b>===</b> is called as strict equality operator which returns true when the two operands are having the same value without any type conversion.</p>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>Explain how can you submit a form using JavaScript?</p>
-					<p>To submit a form using JavaScript use <code>document.form[0].submit();</code></p>
-				</div>
-			</li>
-
-
-			<li>
-				<div>
-					<p>Does JavaScript support automatic type conversion?</p>
-					<p>Yes JavaScript does support automatic type conversion, it is the common way of type conversion used by JavaScript developers</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>Explain how can you submit a form using JavaScript?</p>
+                    <p>To submit a form using JavaScript use <code>document.form[0].submit();</code></p>
+                </div>
+            </li>
 
 
-			<li>
-				<div>
-					<p>How can the style/class of an element be changed?</p>
-					<p>It can be done in the following way:</p>
-					<code>
-						document.getElementById("myText").style.fontSize = "20?";<br>
-						or<br>
-						document.getElementById("myText").className = "anyclass";
-					</code>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>Does JavaScript support automatic type conversion?</p>
+                    <p>Yes JavaScript does support automatic type conversion, it is the common way of type conversion used by JavaScript developers</p>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>Explain how to read and write a file using JavaScript?</p>
-					<p>There are two ways to read and write a file using JavaScript:</p>
-					<ul>
-						<li>Using JavaScript extensions</li>
-						<li>Using a web page and Active X objects</li>
-					</ul>
-				</div>
-			</li>
 
-			<li>
-				<div>
-					<p>What are all the looping structures in JavaScript?</p>
-					<ul>
-						<li>For</li>
-						<li>While</li>
-						<li>do-while loops</li>
-					</ul>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>What is called Variable typing in Javascript?</p>
-					<div>
-						Strong vs weak typing   / static vs dynamic typing<br>
-						A variable can be assigned any value. Static typing means code will error at compile time where as dynamic means it error at runtime(like js).<br>
-						Variable typing is used to assign a number to a variable and the same variable can be assigned to a string.
-						Example:
-						<code>
-							i = 10;
-							i = "string";
-						</code>
-					</div>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>How can the style/class of an element be changed?</p>
+                    <p>It can be done in the following way:</p>
+                    <pre>
+                    <code>
+                        document.getElementById("myText").style.fontSize = "20?";<br>
+                        or<br>
+                        document.getElementById("myText").className = "anyclass";
+                    </code>
+                    </pre>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>How can you convert the string of any base to integer in JavaScript?</p>
-					<p>The parseInt() function is used to convert numbers between different bases. parseInt() takes the string to be converted as its first parameter, and the second parameter is the base of the given string.<br>
-					In order to convert 4F (of base 16) to integer, the code used will be -	parseInt ("4F", 16);</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>Explain how to read and write a file using JavaScript?</p>
+                    <p>There are two ways to read and write a file using JavaScript:</p>
+                    <ul>
+                        <li>Using JavaScript extensions</li>
+                        <li>Using a web page and Active X objects</li>
+                    </ul>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>Explain the difference between <i>==</i> and <i>===</i></p>
-					<p><b>==</b> checks only for equality in value whereas <b>===</b> is a stricter equality test and returns false if either the value or the type of the two variables are different.</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>What are all the looping structures in JavaScript?</p>
+                    <ul>
+                        <li>For</li>
+                        <li>While</li>
+                        <li>do-while loops</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>What is called Variable typing in Javascript?</p>
+                    <div>
+                        Strong vs weak typing   / static vs dynamic typing<br>
+                        A variable can be assigned any value. Static typing means code will error at compile time where as dynamic means it error at runtime(like js).<br>
+                        Variable typing is used to assign a number to a variable and the same variable can be assigned to a string.
+                        Example:
+                        <pre>
+                        <code>
+                            i = 10;
+                            i = "string";
+                        </code>
+                    </pre>
+                    </div>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>What would be the result of <code>3+2+"7"</code>?</p>
-					<p>Since 3 and 2 are integers, they will be added numerically. And since 7 is a string, its concatenation will be done. So the result would be 57.</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>How can you convert the string of any base to integer in JavaScript?</p>
+                    <p>The parseInt() function is used to convert numbers between different bases. parseInt() takes the string to be converted as its first parameter, and the second parameter is the base of the given string.<br>
+                    In order to convert 4F (of base 16) to integer, the code used will be -    parseInt ("4F", 16);</p>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>How to detect the operating system on the client machine?</p>
-					<p>The <u>navigator.platform</u> string (property) should be used.</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>Explain the difference between <i>==</i> and <i>===</i></p>
+                    <p><b>==</b> checks only for equality in value whereas <b>===</b> is a stricter equality test and returns false if either the value or the type of the two variables are different.</p>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>What do mean by <i>null</i> in Javascript?</p>
-					<p>The <i>null</i> value is used to represent no value or no object. It implies no object or null string, no valid boolean value, no number and no array object.</p>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>What would be the result of <code>3+2+"7"</code>?</p>
+                    <p>Since 3 and 2 are integers, they will be added numerically. And since 7 is a string, its concatenation will be done. So the result would be 57.</p>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>What is an <i>undefined</i> value in JavaScript?</p>
-					<p>Undefined value means:</p>
-					<ul>
-						<li>Variable used in the code doesn't exist</li>
-						<li>Variable is not assigned to any value</li>
-						<li>Property doesn't exist</li>
-					</ul>
-				</div>
-			</li>
+            <li>
+                <div>
+                    <p>How to detect the operating system on the client machine?</p>
+                    <p>The <u>navigator.platform</u> string (property) should be used.</p>
+                </div>
+            </li>
 
-			<li>
-				<div>
-					<p>What are all the types of Pop up boxes available in JavaScript?</p>
-					<ul>
-						<li>Alert</li>
-						<li>Comfirm</li>
-						<li>Prompt</li>
-					</ul>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>What is the use of <i>void(0)</i>?</p>
-					<p><i>void(0)</i> is used to prevent the page from refreshing and parameter "zero" is passed while calling.<br>
-					<i>void(0)</i> is used to call another method without refreshing the page.</p>
-					<code><a href="javascript:void(0);" ondblclick="alert('Click it twice!')">Click me not once, but twice.</a></code>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>How can a page be forced to load another page in JavaScript?</p>
-					<p>The following code has to be inserted to achieve the desired effect:</p>
-					<code>
-						&lt;script language="JavaScript" type="text/javascript" &gt;&lt;!-- location.href="http://newhost/newpath/newfile.html"; //--&gt;&lt;/script&gt;
-					</code>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>what is pop()method in JavaScript?</p>
-					<p>The pop() method is similar as the shift() method but the difference is that the Shift method works at the start of the array. Also the pop() method take the last element off of the given array and returns it. The array on which is called is then altered.<br>Example:</p>
-					<code>var clothes = ["Shirt", "Pant", "TShirt"];<br>
-						clothes.pop();
-						console.log(clothes) //Now clothes becomes ["Shirt","Pant"]
-					</code>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>Whether JavaScript has concept level scope?</p>
-					<p>No. JavaScript does not have concept level scope. The variable declared inside the function has scope inside the function.</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>Mention what is the disadvantage of using <i>innerHTML</i> in JavaScript?</p>
-					<p>Using <i>innerHTML</i> in JavaScript has below disadvantages:</p>
-					<ul>
-						<li>Content is replaced everywhere</li>
-						<li>We cannot use like "appending to innerHTML"</li>
-						<li>Even if you use <i>+=</i> like "innerHTML = innerHTML + 'html'" still the old content is replaced by html,</li>
-						<li>The entire innerHTML content is re-parsed and build into elements, therefore its much slower</li>
-						<li>The innerHTML does not provide validation and therefore we can potentially insert valid and broken HTML in the document and break it</li>
-					</ul>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>What is the use of <i>typeof</i> operator?</p>
-					<p><i>typeof</i> is an operator which is used to return a string description of the type of a variable.</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>What are the different types of errors in JavaScript?</p>
-					<ul>
-						<li>Load time errors: Errors which come up when loading a web page like improper syntax errors are known as Load time errors and it generates the errors dynamically.</li>
-						<li>Run time errors: Errors that come due to misuse of the command inside the HTML language.</li>
-						<li>Logical Errors: These are the errors that occur due to the bad logic performed on a function which is having different operation.</li>
-					</ul>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>What is unshift method in JavaScript?</p>
-					<p>Unshift method is like push method which works at the beginning of the array. This method is used to prepend one or more elements to the beginning of the array.</p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<p>What is the 'Strict' mode in JavaScript and how can it be enabled?</p>
-					<p>Strict Mode adds certain compulsions to JavaScript. Under the strict mode, JavaScript shows errors for a piece of codes, which did not show an error before, but might be problematic and potentially unsafe. Strict mode also solves some mistakes that hamper the JavaScript engines to work efficiently.<br>
-					Strict mode can be enabled by adding the string literal "use strict" above the file. This can be illustrated by the given example:</p>
-					<code>
-						function myfunction() {<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;"use strict";<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;var v = "This is a strict mode function";<br>
-						}
-					</code>
-				</div>
-			</li>
-		</ol>
-	</body>
+            <li>
+                <div>
+                    <p>What do mean by <i>null</i> in Javascript?</p>
+                    <p>The <i>null</i> value is used to represent no value or no object. It implies no object or null string, no valid boolean value, no number and no array object.</p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <p>What is an <i>undefined</i> value in JavaScript?</p>
+                    <p>Undefined value means:</p>
+                    <ul>
+                        <li>Variable used in the code doesn't exist</li>
+                        <li>Variable is not assigned to any value</li>
+                        <li>Property doesn't exist</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <p>What are all the types of Pop up boxes available in JavaScript?</p>
+                    <ul>
+                        <li>Alert</li>
+                        <li>Comfirm</li>
+                        <li>Prompt</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>What is the use of <i>void(0)</i>?</p>
+                    <p><i>void(0)</i> is used to prevent the page from refreshing and parameter "zero" is passed while calling.<br>
+                    <i>void(0)</i> is used to call another method without refreshing the page.</p>
+                    <pre><code><a href="javascript:void(0);" ondblclick="alert('Click it twice!')">Click me not once, but twice.</a></code></pre>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>How can a page be forced to load another page in JavaScript?</p>
+                    <p>The following code has to be inserted to achieve the desired effect:</p>
+                    <pre>
+                    <code>
+                        &lt;script language="JavaScript" type="text/javascript" &gt;&lt;!-- location.href="http://newhost/newpath/newfile.html"; //--&gt;&lt;/script&gt;
+                    </code>
+                    </pre>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>what is pop()method in JavaScript?</p>
+                    <p>The pop() method is similar as the shift() method but the difference is that the Shift method works at the start of the array. Also the pop() method take the last element off of the given array and returns it. The array on which is called is then altered.<br>Example:</p>
+                    <pre><code>var clothes = ["Shirt", "Pant", "TShirt"];<br>
+                        clothes.pop();
+                        console.log(clothes) //Now clothes becomes ["Shirt","Pant"]
+                    </code>
+                    </pre>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>Whether JavaScript has concept level scope?</p>
+                    <p>No. JavaScript does not have concept level scope. The variable declared inside the function has scope inside the function.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>Mention what is the disadvantage of using <i>innerHTML</i> in JavaScript?</p>
+                    <p>Using <i>innerHTML</i> in JavaScript has below disadvantages:</p>
+                    <ul>
+                        <li>Content is replaced everywhere</li>
+                        <li>We cannot use like "appending to innerHTML"</li>
+                        <li>Even if you use <i>+=</i> like "innerHTML = innerHTML + 'html'" still the old content is replaced by html,</li>
+                        <li>The entire innerHTML content is re-parsed and build into elements, therefore its much slower</li>
+                        <li>The innerHTML does not provide validation and therefore we can potentially insert valid and broken HTML in the document and break it</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>What is the use of <i>typeof</i> operator?</p>
+                    <p><i>typeof</i> is an operator which is used to return a string description of the type of a variable.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>What are the different types of errors in JavaScript?</p>
+                    <ul>
+                        <li>Load time errors: Errors which come up when loading a web page like improper syntax errors are known as Load time errors and it generates the errors dynamically.</li>
+                        <li>Run time errors: Errors that come due to misuse of the command inside the HTML language.</li>
+                        <li>Logical Errors: These are the errors that occur due to the bad logic performed on a function which is having different operation.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>What is unshift method in JavaScript?</p>
+                    <p>Unshift method is like push method which works at the beginning of the array. This method is used to prepend one or more elements to the beginning of the array.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                  <p>What is the 'Strict' mode in JavaScript and how can it be enabled?</p>
+                  <p>Strict Mode adds certain compulsions to JavaScript. Under the strict mode, JavaScript shows errors for a piece of codes, which did not show an error before, but might be problematic and potentially unsafe. Strict mode also solves some mistakes that hamper the JavaScript engines to work efficiently.<br>
+                    Strict mode can be enabled by adding the string literal "use strict" above the file. This can be illustrated by the given example:</p>
+                  <pre>
+                  <code>
+                        function myfunction() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"use strict";<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;var v = "This is a strict mode function";<br>
+                        }
+                    </code>
+                    </pre>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p>Explain window.onload and onDocumentReady?</p>
+                    <p>The onload function is not run until all the information on the page is loaded. This leads to a substantial delay before any code is executed.<br>
+                      onDocumentReady loads the code just after the DOM is loaded. This allows early manipulation of the code.</p>
+                </div>
+            </li>
+
+        </ol>
+    </body>
 </html>
