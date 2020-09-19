@@ -1,4 +1,59 @@
 <html>
-<head>
-</head>
+	<head>
+		<title>
+			Evaluation metrics of classification model
+		</title>
+	</head>
+	<body>
+		<div data-pm-slice="0 0 []" data-en-clipboard="true"><span>&nbsp;</span></div>
+		<table width="2000" style="border-style: none; width: 675px; margin-left: auto; margin-right: auto;" height="49">
+			<colgroup><col /><col /></colgroup>
+			<tbody>
+				<tr style="height: 75px;">
+					<td style="border-right: solid; border-bottom: solid; width: 1000px; height: 100px;">
+						<div style="text-align: center;"><span>True Positives</span></div>
+						<div style="text-align: center;"><span>(TP)</span></div>
+					</td>
+					<td style="border-left: solid; border-bottom: solid; width: 1000px; height: 100px;">
+						<div style="text-align: center;"><span>False Positives</span></div>
+						<div style="text-align: center;"><span>(FP)</span></div>
+					</td>
+				</tr>
+				<tr style="height: 75px;">
+					<td style="border-right: solid; border-top: solid; width: 1000px; height: 100px;">
+						<div style="text-align: center;"><span>False Negatives</span></div>
+						<div style="text-align: center;"><span>(FN)</span></div>
+					</td>
+					<td style="width: 1000px; height: 100px;">
+						<div style="text-align: center;"><span>True Negatives</span></div>
+						<div style="text-align: center;"><span>(TN)</span></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div><span>&nbsp;</span></div>
+		<div><span></span></div>
+		<p><img src="https://latex2image.joeraut.com/output/img-b217118ee73518ba.svg" url="https://latex2image.joeraut.com/output/img-b217118ee73518ba.svg" isdataurl="false" /></p>
+		<div><span>&nbsp;</span></div>
+		<div><span><b>Precision</b> answers, What proportion of positive identifications was actually correct?</span></div>
+		<div><span></span></div>
+		<p><img src="https://latex2image.joeraut.com/output/img-0848662d14c0708c.svg" url="https://latex2image.joeraut.com/output/img-0848662d14c0708c.svg" isdataurl="false" /></p>
+		<div><span>&nbsp;</span></div>
+		<div><span>&nbsp;</span></div>
+		<div><span><b>Recall</b> answers, What proportion of actual positives was identified correctly?</span></div>
+		<div><span></span></div>
+		<p><img src="https://latex2image.joeraut.com/output/img-ebd56a3003d901a9.svg" url="https://latex2image.joeraut.com/output/img-ebd56a3003d901a9.svg" isdataurl="false" /></p>
+		<div><span>&nbsp;</span></div>
+		<div><span>Both precision and recall are inversely proportional to each other. if one raises other decreases and vice-versa. </span></div>
+		<div><span>Raising classification threshold, reduces false positives there by increasing precision</span></div>
+		<div><span>&nbsp;</span></div>
+		<div><span>For unbiased predictions, check if </span></div>
+		<p><img src="https://latex2image.joeraut.com/output/img-ecf17eef2967230d.svg" url="https://latex2image.joeraut.com/output/img-ecf17eef2967230d.svg" isdataurl="false" /></p>
+		<div><span>&nbsp;</span></div>
+		<p><img src="https://latex2image.joeraut.com/output/img-7a64f990f020699d.svg" url="https://latex2image.joeraut.com/output/img-7a64f990f020699d.svg" isdataurl="false" /></p>
+		<div><span>&nbsp;</span></div>
+		<div><span>Zero Bias doesn't mean that the prediction os perfect. This is just a sanity check. But if a model do not have Zero bias, it is a concern should be addressed.</span></div>
+		<div></div>
+	</body>
 </html>
+
