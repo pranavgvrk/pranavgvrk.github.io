@@ -1,0 +1,472 @@
+<html>
+	<head>
+		<title>
+			Javascript notes
+		</title>
+		<style>
+			body{
+				font-family:Courier New;
+				font-size:18px;
+			}
+			li > div > p:first-child{
+				color:red;
+			}
+			h1{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+  <h1>JQuery Notes</h1>
+		<hr />
+		<h2><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.87);">1.What is jQuery?</span></strong></span></span></h2>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.87);">jQuery</span></strong><span style="color:rgba(0, 0, 0, 0.87);">&nbsp;is&nbsp;</span><strong><span style="color:rgba(0, 0, 0, 0.87);">fast, lightweight and feature-rich</span></strong><span style="color:rgba(0, 0, 0, 0.87);">&nbsp;client side JavaScript Library/Framework which helps in to traverse HTML DOM, make animations, add Ajax interaction, manipulate the page content, change the style and provide cool UI effect. It is one of the most popular client side library and as per a survey it runs on every second website.</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.87);">&nbsp;2.What is jQuery.noConflict?</span></strong></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgba(0, 0, 0, 0.87);">As other client side libraries like MooTools, Prototype can be used with jQuery and they also use&nbsp;</span><span style="color:rgb(232, 62, 140);">$()</span> as their global function and to define variables. This situation creates conflict as <span style="color:rgb(232, 62, 140);">$()</span> is used by jQuery and other library as their global function. To overcome from such situations, jQuery has introduced <span style="color:rgb(232, 62, 140);">jQuery.noConflict()</span>.</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">jQuery.noConflict();</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">// Use jQuery via jQuery(...)</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">jQuery(document).ready(function(){</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">   jQuery(&quot;div&quot;).hide();</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">});  </span></span></pre>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgba(0, 0, 0, 0.87);">You can also use your own specific character in the place of&nbsp;</span><span style="color:rgb(232, 62, 140);">$</span> sign in jQuery.</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">var $j = jQuery.noConflict();</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">// Use jQuery via jQuery(...)</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$j(document).ready(function(){</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">   $j(&quot;div&quot;).hide();</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">});  </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>3.What is a CDN?</strong></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">A content delivery network or content distribution network (CDN) is a large distributed system of servers deployed in multiple data centers across the Internet. The goal of a CDN is to serve content to end-users with high availability and high performance.</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">There are 3 popular jQuery CDNs:</span></span></p>
+<ol>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">Google.</span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">Microsoft</span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">jQuery.</span></span></p>
+    </li>
+</ol>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">Advantages of using CDN:</span></span></p>
+<ul>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">It reduces the load from your server.</span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">It saves bandwidth. jQuery framework will load faster from these CDN.</span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">The most important benefit is it will be cached, if the user has visited any site which is using jQuery framework from any of these CDN</span></span></p>
+    </li>
+</ul>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>4.What does dollar sign ($) means in jQuery?</strong></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">Dollar Sign is nothing but it&#39;s an alias for JQuery.&nbsp;</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.87);">&nbsp;5.What is the use of jquery .each() function?</span></strong></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgba(0, 0, 0, 0.87);">The&nbsp;</span><span style="color:rgb(232, 62, 140);">$.each()</span><span style="color:rgba(0, 0, 0, 0.87);">&nbsp;function is used to iterate over a jQuery object. The&nbsp;</span><span style="color:rgb(232, 62, 140);">$.each()</span><span style="color:rgba(0, 0, 0, 0.87);">&nbsp;function can be used to iterate over any collection, whether it is an object or an array.</span></span></span></p>
+<hr>
+<h2><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.87);">6.Can we have multiple document.ready() function on the same page?</span></strong></span></span></h2>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.87);">YES</span></strong><span style="color:rgba(0, 0, 0, 0.87);">. We can have any number of document.ready() function on the same page.</span></span></span></p>
+<hr>
+<h2><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.87);">7.What is event.PreventDefault?</span></strong></span></span></h2>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgba(0, 0, 0, 0.87);">The&nbsp;</span><span style="color:rgb(232, 62, 140);">event.preventDefault()</span><span style="color:rgba(0, 0, 0, 0.87);">&nbsp;method stops the default action of an element from happening. For example, Prevents a link from following the URL.</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.87);">8.</span><span style="color:rgb(34, 34, 34);">What is the difference between jquery.size() and jquery.length?</span></strong></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">jQuery .size() and .length both return the number of elements in the jQuery object.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">length is faster than the size() because length is a property and size() is a method and length property does not have the overhead of a function call.</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">9.</span><span style="color:rgb(34, 34, 34);">Is there any difference between body onload() and document.ready() function?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgb(34, 34, 34);">onload()</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;event will be called only after&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">the</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;DOM and associated resources like images got loaded, but jQuery&#39;s&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">document</span></strong><span style="color:rgb(34, 34, 34);">.&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">ready()</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;event will be called once&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">the</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;DOM is loaded i.e.,&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">it</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;wont wait for&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">the</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;resources like images to get loaded</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(34, 34, 34);">10.What are selectors in jQuery and how many types of selectors are there?</span></span></span></p>
+<ul>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(68, 68, 68);">Selects all elements which match with the given element Name.&nbsp;</span><span style="color:rgb(64, 30, 122);">$</span><span style="color:rgb(48, 48, 238);">(</span><span style="color:rgb(24, 97, 167);">&#39;a&#39;</span><span style="color:rgb(48, 48, 238);">).</span><span style="color:rgb(209, 28, 237);">css</span><span style="color:rgb(48, 48, 238);">(</span><span style="color:rgb(24, 97, 167);">&#39;background-color&#39;</span><span style="color:rgb(48, 48, 238);">,</span><span style="color:rgb(64, 30, 122);">&nbsp;</span><span style="color:rgb(24, 97, 167);">&#39;#00ff00&#39;</span><span style="color:rgb(48, 48, 238);">);</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(68, 68, 68);">Selects a single element which matches with the given ID.&nbsp;</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(68, 68, 68);">Selects all elements which match with the given Class.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(68, 68, 68);">Universal(*) : Selects all elements available in a DOM.</span><span style="color:rgb(64, 30, 122);">$</span><span style="color:rgb(48, 48, 238);">(</span><span style="color:rgb(24, 97, 167);">&quot;*&quot;</span><span style="color:rgb(48, 48, 238);">)</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(68, 68, 68);">Attribute Selector :Select elements based on its attribute value.</span><span style="color:rgb(64, 30, 122);">$</span><span style="color:rgb(48, 48, 238);">(</span><span style="color:rgb(24, 97, 167);">&#39;[height]&#39;</span><span style="color:rgb(48, 48, 238);">);</span></span></span></p>
+    </li>
+    <li><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(34, 34, 34);">&nbsp;Pseudo selector: $(&quot;:visible&quot;)<br></span></span></span></li>
+</ul>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(48, 48, 238);">11.&nbsp;</span><span style="color:rgb(34, 34, 34);">What are the fastest/slowest selectors in jQuery?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(34, 34, 34);">ID and Element are the&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">fastest selectors.</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;Class&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">selectors</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;are the&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">slowest selectors</span></strong></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgb(34, 34, 34);">12.&nbsp;</span></strong><span style="color:rgb(34, 34, 34);">Difference between $(this) and &#39;this&#39; in jQuery?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">this&nbsp;is the DOM object, whereas&nbsp;$(this)&nbsp;is the jQuery wrapper around same.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">When using&nbsp;this, you can call DOM methods on it, but not jQuery methods. When using&nbsp;$(this), you can call jQuery methods on it, but not DOM methods.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">13.</span><span style="color:rgb(34, 34, 34);">Which is fast document.getElementByID(&#39;txtName&#39;) or $(&#39;#txtName&#39;).?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(102, 102, 102);">Native JavaScipt is always fast. jQuery method to select txtName &quot;$(&#39;#txtName&#39;)&quot; will internally makes a call to document.getElementByID(&#39;txtName&#39;). As jQuery is written on top of JavaScript and it internally uses JavaScript only So JavaScript is always fast.</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(102, 102, 102);">14.</span><span style="color:rgb(34, 34, 34);">How jQuery selectors are executed?</span></span></span></p>
+<div style="text-align:start;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(34, 34, 34);">&nbsp;jQuery selectors are executed from right to left? In other words, the last selector will be executed first when there are multiple selectors. Consider the following example:</span></span></span></div>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$(&quot;div.parent .child&quot;);</span></span></pre>
+<div style="text-align:start;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(34, 34, 34);">In this example, jQuery will first search for all elements with class child (last selector executed first) and then apply a filter to return only those elements which are div elements with a parent class applied. This is the optimized version:</span></span></span></div>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$(&quot;.parent div.child&quot;);</span></span></pre>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<hr>
+<ol start="15">
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(34, 34, 34);">How to create clone of any object using jQuery?</span></span></span></p>
+    </li>
+</ol>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">var clone = $(&#39;div&#39;).clone();</span></span></pre>
+<div style="text-align:start;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(34, 34, 34);">The above code will easily clone any HTML element, but if you want to clone a JavaScript object, you&#39;ll need to use different code like in the example below:</span></span></span></div>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">var clonedObject = jQuery.extend({}, originalObject);</span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">16.<span style="color:rgb(34, 34, 34);">What is difference between prop and attr?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(33, 33, 33);">The property always represents the current state while the attribute (except in old versions of IE) represents the initial state or is meant for HTML attributes since they are strictly defined. The attribute tells you nothing about the current state.</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;input id=&quot;check1&quot; checked=&quot;checked&quot; type=&quot;checkbox&quot; /&gt;   </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">attr(&#39;checked&#39;) //returns checked  </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">prop(&#39;checked&#39;) //returns true  </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">is(&#39;:checked&#39;) //returns true</span></span>
+
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(33, 33, 33);">The prop() method returns a Boolean value for checked, selected, disabled, readOnly and so on while attr returns a defined string. So, you can directly use .prop(&quot;checked&quot;) in an if condition.</span></span></span></pre>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(33, 33, 33);">SelectedIndex, tagName, nodeName, nodeType, ownerDocument, defaultChecked, defaultSelected and so on should be retrieved and set with the .prop() method. These do not have corresponding attributes and are only properties.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(33, 33, 33);">.attr() calls .prop() internally so the .attr() method will be slightly slower than accessing them directly through .prop().</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(33, 33, 33);">17.</span><span style="color:rgb(34, 34, 34);">What is the difference between event.PreventDefault and event.stopPropagation?</span></span></span></p>
+<div style="text-align:start;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">Event propagation is a mechanism of how events propagate through the DOM tree to arrives at its target. Event Propagation has three phases:</span></span></div>
+<ul>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>Capturing Phase</strong>-the event starts from the window down until it reaches the&nbsp;event.target.</span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>Target Phase</strong>-the event has reached the&nbsp;event.target.</span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>Bubling Phase</strong>-the event bubbles up from the&nbsp;event.target&nbsp;element up until it reaches the window.</span></span></p>
+    </li>
+</ul>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><img type="image/png" data-hash="f6e0b2ef1db452784f45c706b3f783f6" alt="Image for post" data-url="https://www.evernote.com/shard/s557/share/fe5e-s557/res/9fe85137-85ce-43de-a8ea-54ad8ea71468" data-natural-width="1600" data-natural-height="800" data-type="image/png" src="https://www.evernote.com/shard/s557/share/fe5e-s557/res/9fe85137-85ce-43de-a8ea-54ad8ea71468" width="1600px" height="800px"></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(41, 41, 41);">event.preventDefault() method prevents the default behavior of an element.&nbsp;</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(41, 41, 41);">The&nbsp;event.stopPropagation()&nbsp;method stops the propagation of an event from occurring in the bubbling or capturing phase.</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(41, 41, 41);">18.</span><span style="color:rgb(34, 34, 34);">What is wrong with this code line &quot;$(&#39;#myid\\.3&#39;).text(&#39;blah blah!!!&#39;);&quot;</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(51, 51, 51);">selectors is having meta characters and to use any of the meta-characters (such as !&quot;#$%&amp;&#39;()*+,./:;&lt;=&gt;?@[\]^`{|}~ ) as a literal part of a name, it must be escaped with with two backslashes: \\. For example, an element with id=&quot;foo.bar&quot;, can use the selector $(&quot;#foo\\.bar&quot;). &nbsp;</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(51, 51, 51);">19.</span><span style="color:rgb(34, 34, 34);">What is the difference between parent() and parents() methods in jQuery?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><a href="https://api.jquery.com/closest/" rel="noreferrer" shape="rect"><span style="color:rgb(83, 90, 96);"><u>closest()</u></span></a><span style="color:rgb(83, 90, 96);">&nbsp;selects the first element that matches the selector, up from the DOM tree. Begins from the current element and travels up.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><a href="https://api.jquery.com/parent/" rel="noreferrer" shape="rect"><span style="color:rgb(83, 90, 96);"><u>parent()</u></span></a><span style="color:rgb(83, 90, 96);">&nbsp;selects one element up (single level up) the DOM tree.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><a href="https://api.jquery.com/parents/" rel="noreferrer" shape="rect"><span style="color:rgb(83, 90, 96);"><u>parents()</u></span></a><span style="color:rgb(83, 90, 96);">&nbsp;method is similar to&nbsp;</span><a href="https://api.jquery.com/parent/" rel="noreferrer" shape="rect"><span style="color:rgb(83, 90, 96);"><u>parent()</u></span></a><span style="color:rgb(83, 90, 96);">&nbsp;but selects all the matching elements up the DOM tree. Begins from the parent element and travels up.</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(83, 90, 96);">20.</span><span style="color:rgb(34, 34, 34);">What is the difference between eq() and get() methods in jQuery?</span></span></span></p>
+<ul>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(58, 58, 58);">.get() and .eq() both return a single &ldquo;element&rdquo; from a jQuery object array, but they return the single element in different forms.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(58, 58, 58);">.eq() returns it as a jQuery object, meaning the DOM element is wrapped in the jQuery wrapper, which means that it accepts jQuery functions.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(58, 58, 58);">.get() return a raw DOM element. You may manipulate it by accessing its attributes and invoking its functions as you would on a raw DOM element. But it loses its identity as a jQuery-wrapped object, so a jQuery function like .fadeIn won&rsquo;t work.</span></span></span></p>
+    </li>
+</ul>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(58, 58, 58);">21.</span><span style="color:rgb(34, 34, 34);">What are various methods to make ajax request in jQuery?</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$.ajax({name:value, name:value, ... })</span></span></pre>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">Parameters:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;The list of possible values are given below:</span></span></span></p>
+<ul>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">type:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to specify the type of request.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">url:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to specify the URL to send the request to.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">username:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to specify a username to be used in an HTTP access authentication request.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">xhr:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used for creating the XMLHttpRequest object.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">async:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It&rsquo;s default value is true. It indicates whether the request should be handled asynchronous or not.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">beforeSend(xhr):</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is a function which is to be run before the request is being sent.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">dataType:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;The data type expected of the server response.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">error(xhr, status, error):</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to run if the request fails.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">global:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It&rsquo;s default value is true. It is used to specify whether or not to trigger global AJAX event handles for the request.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">ifModified:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It&rsquo;s default value is false. It is used to specify whether a request is only successful if the response has changed since the last request.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">jsonp:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;A string overriding the callback function in a jsonp request.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">jsonpCallback:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to specify a name for the callback function in a jsonp request.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">cache:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It&rsquo;s default value is true. It indicates whether the browser should cache the requested pages.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">complete(xhr, status):</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is a function which is to be run when the request is being finished.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">contentType:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It&rsquo;s default value is: &ldquo;application/x-www-form-urlencoded&rdquo; and it is used when data send to the server.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">context:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to specify the &ldquo;this&rdquo; value for all AJAX related callback functions.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">data:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to specify data to be sent to the server.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">dataFilter(data, type):</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to handle the raw response data of the XMLHttpRequest.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">password:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to specify a password to be used in an HTTP access authentication request.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">processData:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It&rsquo;s default value is true. It is used to specify whether or not data sent with the request should be transformed into a query string.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">scriptCharset:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to specify the charset for the request.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">success(result, status, xhr):</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is to be run when the request succeeds.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">timeout:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is the local timeout for the request. It measured in terms of milliseconds.</span></span></span></p>
+    </li>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">traditional:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;It is used to specify whether or not to use the traditional style of param serialization.</span></span></span></p>
+    </li>
+</ul>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$.ajax({url: &quot;sample.txt&quot;,  </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                        success: function(result) { </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                    $(&quot;#h11&quot;).html(result); </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                }}</span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">22.<span style="color:rgb(34, 34, 34);">What is chaining in jQuery?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgba(0, 0, 0, 0.84);">&nbsp;chaining method we can bind multiple methods to make the code short. This way, browsers do not have to find the same element(s) more than once.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgba(0, 0, 0, 0.84);">Advantage:</span></strong><span style="color:rgba(0, 0, 0, 0.84);">While using method chaining in jQuery, it ensures that there is no need to use the same selector more than once. Over-using a selector can seriously slow down your code, as every time you call on a selector you are forcing the browser to go looking for it. By combining or &ldquo;chaining&rdquo; multiple methods, you can seriously cut down on the number of times you make your browser look for the same elements without having to set any variables.</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">//assigning the color blue </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                $(&quot;#para&quot;).css(&quot;color&quot;, &quot;blue&quot;) </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                //using slide up method </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                    .slideUp(2000)   </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                 //using slide down method </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                    .slideDown(2000). </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                slideUp(2000). </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">                slideDown(4000);</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">23.<span style="color:rgb(34, 34, 34);">What are deferred and promise object in jQuery?</span></span></span></p>
+<div style="text-align:justify;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(0, 0, 0);">A&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">deferred object</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;is an object than can create a&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">promise</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;and change its state to resolved or rejected. It is used to register&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">multiple callbacks</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;into callback queues, invoke callback queues, and relay the success or failure state of any&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">synchronous</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;or&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">asynchronous</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;function.</span></span></span></div>
+<div style="text-align:justify;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(0, 0, 0);">A&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">promise</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;is, as the name says, a promise about a future value. Together with the&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">Promise object</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;, Deferred represents the jQuery implementation of promises. You can attach&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">callbacks</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;to it to get that value. It possesses a subset of the methods of the&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">Deferred object</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;: always(), done(), fail(), state(), and then().</span></span></span></div>
+<h2 style="text-align:start;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(0, 128, 0);">deferred.promise()</span></span></span></h2>
+<div style="text-align:justify;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(0, 0, 0);">You cannot use&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">$.Promise();</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;because it does not exist. The&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">deferred.promise()</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;method allows an&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">asynchronous</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;function to prevent other code from interfering with the progress or status of its internal request.</span></span></span></div>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(0, 0, 0);">24.</span><span style="color:rgb(34, 34, 34);">How do you attach a event to element which should be executed only once?</span></span></span></p>
+<div style="text-align:justify;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(0, 0, 0);">The&nbsp;</span><strong><span style="color:rgb(0, 0, 0);">jQuery one() method</span></strong><span style="color:rgb(0, 0, 0);">&nbsp;adds event handlers to the selected element. The handler is executed at most once per element per event type.</span></span></span></div>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$(&quot;button&quot;).one(&quot;click&quot;, function(){</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  alert(&quot;Only once&quot;);</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">});</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span></pre>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;button&gt;Message show only once&lt;/button&gt;</span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">25.<span style="color:rgb(34, 34, 34);">What is the difference between event.PreventDefault and &quot;return false&quot;?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">Returning false from jQuery event handlers is&nbsp;</span><a href="http://github.com/jquery/jquery/blob/1.3.2/src/event.js#L270" rel="noreferrer" shape="rect"><span style="color:rgb(36, 39, 41);"><u>equivalent</u></span></a><span style="color:rgb(36, 39, 41);">&nbsp;to calling both,&nbsp;</span><a href="https://developer.mozilla.org/en/DOM/event.preventDefault" rel="noreferrer" shape="rect"><span style="color:rgb(36, 39, 41);"><u>e.preventDefault</u></span></a><span style="color:rgb(36, 39, 41);">&nbsp;and&nbsp;</span><a href="https://developer.mozilla.org/En/DOM/Event.stopPropagation" rel="noreferrer" shape="rect"><span style="color:rgb(36, 39, 41);"><u>e.stopPropagation</u></span></a><span style="color:rgb(36, 39, 41);">.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">So the difference is that preventDefault will only prevent the default event action to occur, i.e. a page redirect on a link click, a form submission, etc. and return false will also stop the&nbsp;</span><a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow" rel="noreferrer" shape="rect"><span style="color:rgb(36, 39, 41);"><u>event flow</u></span></a><span style="color:rgb(36, 39, 41);">.</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(99, 100, 102);">return false === event.stopPropagation + event.preventDefault()</span></span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">26.&nbsp;</span><span style="color:rgb(34, 34, 34);">What is the difference between $(&#39;div&#39;) and $(&#39;&lt;div/&gt;&#39;) in jQuery?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:blue;">$(&#39;&lt;div/&gt;&#39;)</span><span style="color:rgb(119, 119, 119);">&nbsp;: This creates a new div element. However this is not added to DOM tree unless you don&#39;t append it to any DOM element.</span></span></span><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:blue;">$(&#39;div&#39;)</span><span style="color:rgb(119, 119, 119);">&nbsp;: This selects all the div element present on the page.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(119, 119, 119);">So, the code&nbsp;</span><span style="color:blue;">$(&#39;&lt;div/&gt;&#39;).addClass(&#39;test&#39;)</span><span style="color:rgb(119, 119, 119);">&nbsp;will create a new div element and adds css class called &quot;test&quot;. And&nbsp;</span><span style="color:blue;">$(&#39;div&#39;).addClass(&#39;test&#39;)</span><span style="color:rgb(119, 119, 119);">&nbsp;will select all the div element present on the page and adds css class &quot;test&quot; to them.</span></span></span><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(119, 119, 119);">As mentioned earlier that while using&nbsp;</span><span style="color:blue;">$(&#39;&lt;div/&gt;&#39;)</span><span style="color:rgb(119, 119, 119);">, only new element gets created but it is still not added to DOM. One have to append it to any other element. For example, to append this newly created div to body, use below jQuery code.</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:blue;">$(&#39;&lt;div/&gt;&#39;).addClass(&#39;test&#39;).appendTo(&#39;body&#39;)</span></span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">27.<span style="color:rgb(34, 34, 34);">Is there any advantage of using $.ajax() for ajax call against $.get() or $.post()?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgb(36, 39, 41);">GET</span></strong><span style="color:rgb(36, 39, 41);">: Get information stored in the server. (i.e. search, tweet, person information). Url cannot handle more than 2036 char.&nbsp;</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgb(36, 39, 41);">POST</span></strong><span style="color:rgb(36, 39, 41);">: Post do same thing as GET. User registration, User login, Big data send, Blog Post. If you need to send secure information then use post or for big data as it not go through url.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgb(36, 39, 41);">AJAX</span></strong><span style="color:rgb(36, 39, 41);">: $.get() and $.post() contain features that are subsets of $.ajax(). It has more configuration.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">$.get () method, which is a kind of shorthand for $.ajax(). When using $.get (), instead of passing in an object, you pass in arguments. At minimum, you&rsquo;ll need the first two arguments, which are the URL of the file you want to retrieve (eg.&nbsp;</span><em><span style="color:rgb(36, 39, 41);">test.txt)</span></em><span style="color:rgb(36, 39, 41);">&nbsp;and a success callback.</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">28.</span><span style="color:rgb(34, 34, 34);">Explain .bind() vs .live() vs .delegate() vs .on()</span></span></span></p>
+<ol>
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>.bind():</strong> bind() method is the jquery method and it is one of the easiest and quick method in jquery to bind events. It&#39;s only attach events to the current elements not on future elements. But the issue about the bind() method is that it doesn&#39;t work for elements added dynamically. And, its performance is low when dealing with a large selection.</span></span></p>
+    </li>
+</ol>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>Syntax :</strong></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$(selector).bind(event,data,function,map)</span></span></pre>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>Parameter :</strong></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>event :</strong> it&#39;s a required parameter which specifies one or more events to attach to the elements.(Multiple event values are separated by space.)</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>data :</strong> it&#39;s a optional parameter which specifies additional data to pass along to the function.</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>function :</strong> it&#39;s also a required parameter which specifies the function to run when the event occurs.</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<ol start="2">
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>.live():</strong></span></span><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">live() is also a another jquery method and this method overcomes the disadvantages of bind() method. It&#39;s basically work for current and future elements.</span></span><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">But the live() method is depreciated in jquery version 1.7 and removed in version 1.9.(because of it&#39;s poor performance on large pages).</span></span></p>
+    </li>
+</ol>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>Syntax :</strong></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$(selector).live(event,data,function)</span></span></pre>
+<ol start="3">
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>.delegate():</strong></span></span></p>
+    </li>
+</ol>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">delegate() is also a jquery method and work as simlilar to the live() method. And it also work for the element in current as well as future elements, and it attach one or more event handlers for specified elements that are children of selected elements and call the function when the events has occur. And, it is also supports chaining.</span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>Syntax:</strong></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$(selector).delegate(childSelector,event,data,function)</span></span></pre>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>Parameter:</strong></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong>childSelector:</strong> it&#39;s a required parameter which specifies one or more child elements to attach the event handler to.</span></span></p>
+<ol start="4">
+    <li>
+        <p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgb(68, 68, 68);">.on():</span></strong></span></span><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(68, 68, 68);">&nbsp;on() method is also a jquery method and it is used to overcome the live() method because live() was depreciated with jquery version 1.7 so the new method was introduced names as on() method. This method provides all the goodness of all the previous methods (above 3 methods) and it makes uniformity for attaching event handlers (selected elements and child elemnets).</span></span></span><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(68, 68, 68);">&nbsp;It&#39;s basically the replacement of bind() live() and delegate() method. And it also work on current as well as future elements.</span></span></span></p>
+    </li>
+</ol>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgb(68, 68, 68);">If you want to remove event handlers, use the off() method.</span></strong></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgb(68, 68, 68);">29.&nbsp;</span></strong><span style="color:rgb(34, 34, 34);">In what situation you would use multiple version of jQuery and how would you include them?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">Yes, it&#39;s doable due to jQuery&#39;s noconflict mode.</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;!-- load jQuery 1.1.3 --&gt;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;script type=&quot;text/javascript&quot; src=&quot;http://example.com/jquery-1.1.3.js&quot;&gt;&lt;/script&gt;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;script type=&quot;text/javascript&quot;&gt;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">var jQuery_1_1_3 = $.noConflict(true);</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;/script&gt;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span></pre>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;!-- load jQuery 1.3.2 --&gt;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;script type=&quot;text/javascript&quot; src=&quot;http://example.com/jquery-1.3.2.js&quot;&gt;&lt;/script&gt;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;script type=&quot;text/javascript&quot;&gt;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">var jQuery_1_3_2 = $.noConflict(true);</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">&lt;/script&gt;</span></span>
+
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">Then, instead of $(&#39;#selector&#39;).function();, you&#39;d do jQuery_1_3_2(&#39;#selector&#39;).function(); or jQuery_1_1_3(&#39;#selector&#39;).function();.</span></span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">30.</span><span style="color:rgb(34, 34, 34);">How does caching helps and how to use caching in jQuery?&nbsp;</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><strong><span style="color:rgb(34, 34, 34);">Caching</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;enhances the performance of the application.&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">Cache</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;your&nbsp;</span><strong><span style="color:rgb(34, 34, 34);">jQuery</span></strong><span style="color:rgb(34, 34, 34);">&nbsp;selectors for better performance</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">function Selector_Cache() {</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">    var collection = {};</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">    function get_from_cache( selector ) {</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">        if ( undefined === collection[ selector ] ) {</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">            collection[ selector ] = $( selector );</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">        }</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">        return collection[ selector ];</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">    }</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">    return { get: get_from_cache };</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">}</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">var selectors = new Selector_Cache();</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">// Usage $( &#39;#element&#39; ) becomes</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">selectors.get( &#39;#element&#39; );</span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">31. <span style="color:rgb(34, 34, 34);">How can I get jQuery to perform a synchronous, rather than asynchronous, Ajax request?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(34, 34, 34);">$.ajax has parameter &#39;async &#39;, set is as &#39;false&#39; . similar way we have &#39;cache&#39; as well</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(34, 34, 34);">32.What is the advantage of using protocol less URL while referencing jQuery from CDNs?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(119, 119, 119);">&nbsp;reference of jQuery library (if Google CDN is used) like this,</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js</span></span></pre>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(119, 119, 119);">As you can see it is using HTTP protocol. The advantage of Google CDN files are cached up to one year which means that your users may not need to download jQuery at all. But when you move from HTTP to HTTPS pages, then you need to make sure that you are using https protocol for referencing jQuery as pages served via SSL should contain no references to content served through unencrypted connections.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(119, 119, 119);">And take a note that content served via SSL are not cacheable. Browsers will simply ignore content served over SSL for caching. So you need to make sure that if you are moving from HTTP to HTTPS url, use correct protocol for referencing jQuery library as well.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(119, 119, 119);">The better approach would be to use &quot;protocol-less&quot; URL.</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js</span></span></pre>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(119, 119, 119);">It looks strange and initially I also felt the same but&nbsp;</span><strong><span style="color:rgb(119, 119, 119);">&quot;protocol-less&quot; URL is the best way to reference third party content that&rsquo;s available via both HTTP and HTTPS.</span></strong><span style="color:rgb(119, 119, 119);">&nbsp;When a URL&rsquo;s protocol is omitted, the browser uses the underlying document&rsquo;s protocol instead.</span></span></span><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(119, 119, 119);">Thus, using the protocol-less URL allows a single script reference to adapt itself to what&rsquo;s most optimal: HTTP and it&rsquo;s full caching support on HTTP pages, and HTTPS on secured pages so that your users aren&#39;t confronted with a mixed content warning.</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(119, 119, 119);">33.&nbsp;</span><span style="color:rgb(34, 34, 34);">Is it possible to get value of multiple CSS properties in single statement?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">Better to just use&nbsp;</span><a href="https://api.jquery.com/addClass/" rel="noreferrer" shape="rect"><span style="color:rgb(36, 39, 41);"><u>.addClass()</u></span></a><span style="color:rgb(36, 39, 41);">&nbsp;and&nbsp;</span><a href="https://api.jquery.com/removeclass/" rel="noreferrer" shape="rect"><span style="color:rgb(36, 39, 41);"><u>.removeClass()</u></span></a><span style="color:rgb(36, 39, 41);">&nbsp;even if you have 1 or more styles to change. It&#39;s more maintainable and readable.</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">If you really have the urge to do multiple CSS properties, then use the following:</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">.css({</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">   &#39;font-size&#39; : &#39;10px&#39;,</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">   &#39;width&#39; : &#39;30px&#39;,</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">   &#39;height&#39; : &#39;10px&#39;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">});</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span></pre>
+<h2 style="text-align:start;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(38, 38, 38);">Get a CSS Property Value</span></span></span></h2>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$(selector).css(&quot;propertyName&quot;);</span></span></pre>
+<h2 style="text-align:start;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(38, 38, 38);">Set a Single CSS Property and Value</span></span></span></h2>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$(selector).css(&quot;propertyName&quot;, &quot;value&quot;);</span></span></pre>
+<h2 style="text-align:start;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(38, 38, 38);">Set Multiple CSS Properties and Values</span></span></span></h2>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$(selector).css({&quot;propertyName&quot;:&quot;value&quot;, &quot;propertyName&quot;:&quot;value&quot;, ...});</span></span></pre>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><br></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">34.<span style="color:rgb(34, 34, 34);">What is the difference between event.stopPropagation and event.stopImmediatePropagation?</span></span></span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><a href="http://api.jquery.com/event.stopPropagation/" rel="noreferrer" shape="rect"><u>event.stopPropagation()</u></a><span style="color:rgb(36, 39, 41);">&nbsp;allows other handlers on the same element to be executed, while&nbsp;</span><a href="http://api.jquery.com/event.stopImmediatePropagation/" rel="noreferrer" shape="rect"><u>event.stopImmediatePropagation()</u></a><span style="color:rgb(36, 39, 41);">&nbsp;prevents&nbsp;</span><em><span style="color:rgb(36, 39, 41);">every</span></em><span style="color:rgb(36, 39, 41);">&nbsp;event from running.</span></span></span></p>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(36, 39, 41);">35.</span><span style="color:rgb(34, 34, 34);">Is it possible to hold or delay document.ready execution for sometime?</span></span></span></p>
+<div style="text-align:start;"><span style="font-size: 18px;"><span style="font-family: Courier New, courier;"><span style="color:rgb(102, 102, 102);">Yes, its possible. With Release of jQuery 1.6, a new method &ldquo;jQuery.holdReady(hold)&rdquo; was introduced. This method allows to delay the execution of document.ready() event. document.ready() event is called as soon as your DOM is ready but sometimes there is a situation when you want to load additional JavaScript or some plugins which you have referenced.</span></span></span></div>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$.holdReady(true);</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$.getScript(&quot;myplugin.js&quot;, function() {</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">     $.holdReady(false);</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">});</span></span><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">36.<span style="color:rgb(34, 34, 34);">How can I implement my own $(document).ready functionality without using jQuery?</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">document.addEventListener(&quot;DOMContentLoaded&quot;, function(event) { </span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  //do work</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">});</span></span><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span></pre>
+<hr>
+<p><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">36.<span style="color:rgb(34, 34, 34);">Can we execute/run multiple Ajax request simultaneously in jQuery? If yes, then how?</span></span></span></p>
+<pre><span style="font-size: 18px;"><span style="font-family: Courier New, courier;">$.when(</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  // Get the HTML</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  $.get(&quot;/feature/&quot;, function(html) {</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">    globalStore.html = html;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  }),</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  // Get the CSS</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  $.get(&quot;/assets/feature.css&quot;, function(css) {</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">    globalStore.css = css;</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  }),</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  // Get the JS</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  $.getScript(&quot;/assets/feature.js&quot;)</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">).then(function() {</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  // All is ready now, so...</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  // Add CSS to page</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  $(&quot;&lt;style /&gt;&quot;).html(globalStore.css).appendTo(&quot;head&quot;);</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  // Add HTML to page</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">  $(&quot;body&quot;).append(globalStore.html);</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">
+</span></span>
+<span style="font-size: 18px;"><span style="font-family: Courier New, courier;">});</span></span></pre>
+	</body>
+</html>
